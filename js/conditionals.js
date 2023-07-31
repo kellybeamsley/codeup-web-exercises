@@ -26,22 +26,22 @@
 // let analyzeColor = prompt("What is a color?");
 //
 // if (analyzeColor === "red") {
-//     alert("Strawberries are red");
+//     return("Strawberries are red");
 // } else if (analyzeColor === "orange") {
-//     alert("Oranges are orange");
+//     return("Oranges are orange");
 // } else if (analyzeColor === "yellow") {
-//     alert("Lemons are yellow");
+//     return("Lemons are yellow");
 // } else if (analyzeColor === "green") {
-//     alert("Grass is green");
+//     return("Grass is green");
 // } else if (analyzeColor === "blue") {
-//     alert("blue is the color of the sky");
+//     return("blue is the color of the sky");
 // } else if (analyzeColor === "indigo") {
-//     alert("Jeans are indigo");
+//     return("Jeans are indigo");
 // } else if (analyzeColor === "violet") {
-//     alert("Lavender is violet");
+//     return("Lavender is violet");
 // }
 // else{
-//     alert("I don't know anything about that color.");
+//     return("I don't know anything about that color.");
 // }
 
 // Don't change the next two lines!
@@ -58,41 +58,25 @@
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-// let analyzeColor = prompt("Your color is " + randomColor);
+// console.log(analyzeColor(randomColor));
 
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
-let analyzeColor = prompt("What color do you like?");
-
-switch(analyzeColor) {
-    case "red":
-        alert("What a coincidence, that's my favorite!");
-        break;
-    case "orange":
-        alert("Just plain orange? Okay...");
-        break;
-    default:
-        alert(analyzeColor + " isn't my favorite color!");
-        break;
-}
-
-
-// let pizzaPreference = prompt("What kind of pizza do you like?");
+// let analyzeColor = prompt("What color do you like?");
 //
-// switch(pizzaPreference) {
-//     case "pineapple and hot sauce":
+// switch(analyzeColor) {
+//     case "red":
 //         alert("What a coincidence, that's my favorite!");
 //         break;
-//     case "cheese":
-//         alert("Just plain cheese? Okay...");
+//     case "orange":
+//         alert("Just plain orange? Okay...");
 //         break;
 //     default:
-//         alert(pizzaPreference + " isn't my favorite, but let's order some!");
+//         alert(analyzeColor + " isn't my favorite color!");
 //         break;
 // }
-
 
 /**
  * TODO:
@@ -100,6 +84,8 @@ switch(analyzeColor) {
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+// let userColor = prompt("Enter a color");
+// alert(analyzeColor(userColor));
 
 /* ########################################################################## */
 
@@ -123,6 +109,26 @@ switch(analyzeColor) {
  * return value.
  */
 
+function calculateTotal(lucky, price) {
+    if (lucky === 0) {
+        return "Your total after discount is: $" + price;
+    } else if (lucky === 1) {
+        return "Your total after discount is: $" + (price - (.10 * price));
+    } else if (lucky === 2) {
+        return "Your total after discount is: $" + (price - (.25 * price));
+    } else if (lucky === 3) {
+        return "Your total after discount is: $" + (price - (.35 * price));
+    } else if (lucky === 4) {
+        return "Your total after discount is: $" + (price - (.50 * price));
+    }else if (lucky === 5) {
+        return "Your total after discount is: $" + (price - price);
+    }
+}
+
+console.log(calculateTotal(5, 33));
+console.log(calculateTotal(3, 100));
+console.log(calculateTotal(2, 53));
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
@@ -134,6 +140,12 @@ switch(analyzeColor) {
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
 
+//
+// let userTotal = prompt("What was your bill total?");
+//
+// alert(`Your lucky number is ${luckyNumber}`);
+// alert(`Your price before discount was $${userTotal}`);
+// alert(`${calculateTotal(luckyNumber, userTotal)}`);
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -152,3 +164,29 @@ switch(analyzeColor) {
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+let userConfirm = confirm("Would you like to enter a number?");
+
+if (userConfirm) {
+    let userNumber = prompt("Please enter a number:");
+
+    if (!isNaN(userNumber)) {
+        let parsedNumber = parseFloat(userNumber);
+
+        let evenOrOddMessage = "";
+        if (parsedNumber % 2 === 0) {
+            evenOrOddMessage = "Your number is even!"
+        } else {
+            evenOrOddMessage = "Your number is odd!"
+        }
+        // (parsedNumber % 2 === 0) ? "Your number is even!" : "Your number is odd!";
+        alert(evenOrOddMessage);
+
+        alert(`Your number plus 100 is: ${parsedNumber + 100}`);
+
+        let positiveNegativeMessage = (parsedNumber >= 0) ? "Your number is positive!" : "Your number is negative!";
+        alert(positiveNegativeMessage);
+    } else {
+        alert("Hey, that's not a number!");
+    }
+}

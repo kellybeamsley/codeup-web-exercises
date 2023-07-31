@@ -60,3 +60,19 @@ let totalPayment = googlePayment + amazonPayment + facebookPayment;
 
 // Display the result
 alert("Total payment for this week: $" + totalPayment);
+
+
+
+// Variables representing the conditions
+var isClassFull = false; // true if the class is full, false otherwise
+var scheduleConflict = false; // true if there is a schedule conflict, false otherwise
+
+// Check if the student can be enrolled in the class
+var canEnroll = !isClassFull && !scheduleConflict;
+
+// Display the result
+alert("Can the student enroll in the class? " + canEnroll);
+
+
+
+

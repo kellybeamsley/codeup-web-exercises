@@ -1,3 +1,7 @@
+"use strict";
+
+
+
 console.log('Hello from external JavaScript');
 
 alert("Welcome to my Website!");
@@ -64,15 +68,52 @@ alert("Total payment for this week: $" + totalPayment);
 
 
 // Variables representing the conditions
-var isClassFull = false; // true if the class is full, false otherwise
-var scheduleConflict = false; // true if there is a schedule conflict, false otherwise
+let isClassFull = false; // true if the class is full, false otherwise
+let scheduleConflict = false; // true if there is a schedule conflict, false otherwise
 
 // Check if the student can be enrolled in the class
-var canEnroll = !isClassFull && !scheduleConflict;
+let canEnroll = !isClassFull && !scheduleConflict;
 
 // Display the result
 alert("Can the student enroll in the class? " + canEnroll);
 
 
 
+// Variables representing the conditions
+let numberOfItemsBought = parseInt(prompt('How many items were bought?')); // Number of items bought by the person
+let isOfferExpired = false; // true if the offer has expired, false otherwise
+let isPremiumMember = false; // true if the person is a premium member, false otherwise
 
+// Check if the product offer can be applied
+let canApplyOffer = (numberOfItemsBought > 2 && !isOfferExpired) || numberOfItemsBought === 1;
+
+// Display the result
+alert("Can the product offer be applied? " + canApplyOffer);
+
+
+// Username and Password
+// the password must be at least 5 characters
+// the password must not include the username
+// the username must be no more than 20 characters
+// neither the username or password can start or end with whitespace
+let username = prompt('Type an username: ');
+let password = prompt('Type a password:');
+
+// Check if the password is at least 5 characters
+let isPasswordLengthValid = password.length >= 5;
+
+// Check if the password does not include the username
+let doesPasswordIncludeUsername = password.toLowerCase().includes(username.toLowerCase());
+
+// Check if the username is no more than 20 characters
+let isUsernameLengthValid = username.length <= 20;
+
+// Check if neither the username nor password starts or ends with whitespace
+let noWhitespaceAtStartOrEnd = username.trim() && !password.trim();
+
+
+// Display the results
+alert("Is the password at least 5 characters? " + isPasswordLengthValid);
+alert("Does the password include the username? " + doesPasswordIncludeUsername);
+alert("Is the username no more than 20 characters? " + isUsernameLengthValid);
+alert("Does neither the username nor password have whitespace at the start or end? " + noWhitespaceAtStartOrEnd);

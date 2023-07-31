@@ -49,21 +49,49 @@
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-let randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+// let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+// let randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-let analyzeColor = prompt("Your color is " + randomColor);
+// let analyzeColor = prompt("Your color is " + randomColor);
 
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
+let analyzeColor = prompt("What color do you like?");
 
+switch(analyzeColor) {
+    case "red":
+        alert("What a coincidence, that's my favorite!");
+        break;
+    case "orange":
+        alert("Just plain orange? Okay...");
+        break;
+    default:
+        alert(analyzeColor + " isn't my favorite color!");
+        break;
+}
+
+
+// let pizzaPreference = prompt("What kind of pizza do you like?");
+//
+// switch(pizzaPreference) {
+//     case "pineapple and hot sauce":
+//         alert("What a coincidence, that's my favorite!");
+//         break;
+//     case "cheese":
+//         alert("Just plain cheese? Okay...");
+//         break;
+//     default:
+//         alert(pizzaPreference + " isn't my favorite, but let's order some!");
+//         break;
+// }
 
 
 /**

@@ -9,6 +9,11 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
+function sayHello(name){
+    return "Hello, " + name;
+}
+let myName = "Kelly";
+console.log(sayHello(myName))
 
 /**
  * TODO:
@@ -17,6 +22,7 @@
  *
  * console.log 'helloMessage' to check your work
  */
+
 
 /**
  * TODO:

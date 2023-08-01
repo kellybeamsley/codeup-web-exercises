@@ -9,11 +9,13 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
-function sayHello(name){
-    return "Hello, " + name;
-}
-let myName = "Kelly";
-console.log(sayHello(myName))
+// function sayHello(name){
+//     return "Hello, " + name;
+// }
+// let myName = "Kelly";
+// console.log(sayHello(myName))
+
+
 
 /**
  * TODO:
@@ -22,6 +24,15 @@ console.log(sayHello(myName))
  *
  * console.log 'helloMessage' to check your work
  */
+function sayHello(name) {
+    return "Hello, " + name + "!";
+}
+// Call the 'sayHello' function and pass your name as a string literal argument
+let helloMessage = sayHello("Kelly");
+
+// Log the value of 'helloMessage' to the console
+console.log(helloMessage);
+
 
 
 /**

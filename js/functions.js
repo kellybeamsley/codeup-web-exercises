@@ -113,23 +113,23 @@ var random = Math.floor((Math.random() * 3) + 1);
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-function calculateTip(tipPercentage, totalBill) {
-    return tipPercentage * totalBill;
-}
-
-// Get input from the user
-let billTotalInput = prompt("Enter the total bill amount:");
-let tipPercentageInput = prompt("Enter the tip percentage (e.g., 15 for 15%):");
-
-// Parse the user inputs to numbers (since prompt returns strings)
-let billTotal = parseFloat(billTotalInput);
-let tipPercentage = parseFloat(tipPercentageInput) / 100; // Convert percentage to decimal
-
-// Calculate the tip amount using the calculateTip function
-let tipAmount = calculateTip(tipPercentage, billTotal);
-
-// // Display the calculated tip amount to the user
-alert("You should tip: $" + tipAmount.toFixed(2));
+// function calculateTip(tipPercentage, totalBill) {
+//     return tipPercentage * totalBill;
+// }
+//
+// // Get input from the user
+// let billTotalInput = prompt("Enter the total bill amount:");
+// let tipPercentageInput = prompt("Enter the tip percentage (e.g., 15 for 15%):");
+//
+// // Parse the user inputs to numbers (since prompt returns strings)
+// let billTotal = parseFloat(billTotalInput);
+// let tipPercentage = parseFloat(tipPercentageInput) / 100; // Convert percentage to decimal
+//
+// // Calculate the tip amount using the calculateTip function
+// let tipAmount = calculateTip(tipPercentage, billTotal);
+//
+// // // Display the calculated tip amount to the user
+// alert("You should tip: $" + tipAmount.toFixed(2));
 
 
 
@@ -147,4 +147,35 @@ alert("You should tip: $" + tipAmount.toFixed(2));
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+// Create a function name `applyDiscount`.  This function should accept a price (before a discount is applied) and a discount percentage (a number between 0 and 1). It should return the result of applying the discount to the original price.
 
+// Example A
+// function applyDiscount(price, discountPercentage) {
+//     return price * (1 - discountPercentage);
+// }
+//
+// // Examples
+// var originalPrice = 100;
+// var discountPercent = 0.2; // 20%
+// console.log(applyDiscount(originalPrice, discountPercent)); // Output: 80
+//
+// console.log(applyDiscount(45.99, 0.12)); // Output: 40.4712
+
+//Example B
+function applyDiscount(price, discountPercent) {
+     return price - (price * discountPercent);
+}
+
+// Get input from the user
+let originalPriceInput = prompt("Enter the price:");
+let discountPercentInput = prompt("Enter the discount percentage (e.g., .15 for 15% or .18 for 18%):");
+
+// Parse the user inputs to numbers (since prompt returns strings)
+let originalPrice = parseFloat(originalPriceInput);
+let discountPercent = parseFloat(discountPercentInput);
+
+// Calculate the discount amount using the applyDiscount function
+let discountAmount = applyDiscount(originalPrice, discountPercent);
+
+// Display the calculated discounted amount to the user
+alert("You should pay: $" + discountAmount.toFixed(2));

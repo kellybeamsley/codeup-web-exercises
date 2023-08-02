@@ -1,5 +1,5 @@
 "use strict";
-
+alert ("test")
 /**
  * TODO:
  * Create a function called 'sayHello' that takes a parameter 'name'.
@@ -8,11 +8,22 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
+//named function - function's name sayHello
+//one parameter - parameter === name
+//Store parameter in let
+//return... "Hello, " +
 
-// function sayHello(name) {
-//     return "Hello, " + name + "!";
-// }
-// console.log(sayHello("codeup")); // Output: "Hello, codeup!"
+function sayHello(name) {
+    return "Hello, " + name + "!";
+}
+console.log(sayHello("codeup")); // Output: "Hello, codeup!"
+
+//Instructor's Example
+function sayHello(name) {
+     let nameInput = name;
+//   return `Hello, " ${nameInput}!`;
+  return "Hello, " + nameInput + "!";
+}
 
 
 

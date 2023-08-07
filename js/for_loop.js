@@ -2,7 +2,7 @@
 // alert ("test");
 
 // For Loops
-// Create a file named for_loops.js inside the js directory and link it to your loops.html file.
+// 1. Create a file named for_loops.js inside the js directory and link it to your loops.html file.
 //     Create a function named showMultiplicationTable
 //     that accepts a number and
 //     console.logs the multiplication table for that number (just multiply by the numbers 1 through 10)
@@ -17,7 +17,6 @@
 // 7 x 8 = 56
 // 7 x 9 = 63
 // 7 x 10 = 70
-
 
 // let userInput = prompt ("Enter a number:");
 // let number = parseFloat(userInput);

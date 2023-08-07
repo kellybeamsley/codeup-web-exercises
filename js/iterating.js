@@ -6,6 +6,7 @@
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
+// Declare an array called 'names' containing a list of strings.
     let names = ['Nancy', 'Andrew', 'Mary', 'Eric'];
 
 
@@ -15,6 +16,7 @@
      * Create a log statement that will log the number of elements in the names
      * array.
      */
+// Declare an array called 'numbers' containing a list of numbers.
     let numbers = [1, 2, 3, 4];
     console.log(names[0]); // 1
     console.log(names[1]); // 2
@@ -28,13 +30,17 @@
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
-// Syntax Position Names
-// for (function(element, index, array) {
-// })
-// loop through the array and log the values
-    for (let i = 0; i < names.length; i++) {
-        console.log(names[i]);
-    }
+    // Print the first element (index 0) of the 'names' array.
+    console.log(names[0]); // Output: Nancy
+
+// Print the second element (index 1) of the 'names' array.
+    console.log(names[1]); // Output: Andrew
+
+// Print the third element (index 2) of the 'names' array.
+    console.log(names[2]); // Output: Mary
+
+// Print the fourth element (index 3) of the 'names' array.
+    console.log(names[3]); // Output: Eric
 
 
 
@@ -43,7 +49,13 @@
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
-
+// Syntax Position Names
+// for (function(element, index, array) {
+// })
+// loop through the array and log the values
+    for (let i = 0; i < names.length; i++) {
+        console.log(names[i]);
+    }
     
     
     
@@ -51,6 +63,17 @@
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
+// Declare an array called 'names' containing a list of strings.
+//     let names = ['Nancy', 'Andrew', 'Mary', 'Eric'];
+
+// Use a forEach loop to iterate through each element in the 'names' array.
+    names.forEach(function(individualname) {
+        // Inside the loop, the 'name' variable holds the current element.
+        // Print each name individually.
+        console.log(individualname);
+    });
+
+
 
     /**
      * TODO:
@@ -66,57 +89,49 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
+
+
+    /**
+     * Returns the first item in the array.
+     * @param {Array} arr - The input array.
+     * @returns {*} - The first element of the array.
+     */
+    function first(arr) {
+        return arr[0];
+    }
+
+    /**
+     * Returns the second item in the array.
+     * @param {Array} arr - The input array.
+     * @returns {*} - The second element of the array.
+     */
+    function second(arr) {
+        return arr[1];
+    }
+
+    /**
+     * Returns the last item in the array.
+     * @param {Array} arr - The input array.
+     * @returns {*} - The last element of the array.
+     */
+    function last(arr) {
+        return arr[arr.length - 1];
+    }
+
+// Example usage:
+//     let numbers = [1, 2, 3, 4, 5];
+//
+//     let firstNumber = first(numbers);
+//     console.log(firstNumber); // Output: 1
+//
+//     let secondNumber = second(numbers);
+//     console.log(secondNumber); // Output: 2
+//
+//     let lastNumber = last(numbers);
+//     console.log(lastNumber); // Output: 5
+
+
+
+
+
 })();
-
-
-
-// [] // an empty array
-//
-//     [1] // an array with one element
-//
-//     [1, 2, 3, 4, 5] // an array with 5 elements
-//
-//     ["one", 42, [8, 9, 10]] // an array with 3 elements all of different types
-// // notice that the array above does *not* have 5 elements, rather the last
-// // element is itself an array with 3 elements in it
-
-
-
-// let shapes = ['square', 'rectangle', 'circle', 'triangle'];
-//
-// console.log(shapes.length); // 4
-//
-// var numbers = [1, 2, 3, 4];
-// console.log(numbers[0]); // 1
-// console.log(numbers[1]); // 2
-// console.log(numbers[2]); // 3
-// console.log(numbers[3]); // 4
-
-
-// var shapes = ['square', 'rectangle', 'circle', 'triangle'];
-//
-// console.log('There are ' + shapes.length + ' shapes in the array');
-//
-// console.log('The first shape is: ' + shapes[0]);
-// // The first shape is: square
-//
-// console.log('The second shape is: ' + shapes[1]);
-// // The second shape is: rectangle
-//
-// console.log('The third shape is: ' + shapes[2]);
-// // The third shape is: circle
-//
-// console.log('The fourth shape is: ' + shapes[3]);
-// // The fourth shape is: triangle
-//
-// console.log('The fifth shape is: ' + shapes[4]);
-// // The fifth shape is: undefined
-//
-//
-//
-// // For Loop
-// let shapes = ['square', 'rectangle', 'circle', 'triangle'];
-//
-// // loop through the array and log the values
-// for (let i = 0; i < shapes.length; i++) {
-//     console.log('The shape at index ' + i + ' is: ' + shapes[i]);

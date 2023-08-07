@@ -16,12 +16,7 @@
      * Create a log statement that will log the number of elements in the names
      * array.
      */
-// Declare an array called 'numbers' containing a list of numbers.
-    let numbers = [1, 2, 3, 4];
-    console.log(names[0]); // 1
-    console.log(names[1]); // 2
-    console.log(names[2]); // 3
-    console.log(names[3]); // 4
+    console.log(names.length);
 
 
 

@@ -32,17 +32,17 @@
      */
 // kb Notes: Might use this. 
 
-    let person = {};                     // Step 1: Create an empty object named `person`
-    person.firstName = "Rick";           // Step 2: Add `firstName` property and assign a value
-    person.lastName = "Sanchez";         // Step 3: Add `lastName` property and assign a value
-
-// Step 4: Create a `sayHello` method on the `person` object
-    person.sayHello = function () {
-        console.log("Hello from " + this.firstName + " " + this.lastName);
-    };
-
-// Step 5: Call the `sayHello` method of the `person` object
-    person.sayHello();                   // Step 6: Output: "Hello from Rick Sanchez!"
+//     let person = {};                     // Step 1: Create an empty object named `person`
+//     person.firstName = "Rick";           // Step 2: Add `firstName` property and assign a value
+//     person.lastName = "Sanchez";         // Step 3: Add `lastName` property and assign a value
+//
+// // Step 4: Create a `sayHello` method on the `person` object
+//     person.sayHello = function () {
+//         console.log("Hello from " + this.firstName + " " + this.lastName);
+//     };
+//
+// // Step 5: Call the `sayHello` method of the `person` object
+//     person.sayHello();                   // Step 6: Output: "Hello from Rick Sanchez!"
 
 
 
@@ -60,15 +60,47 @@
      * and console.log the relevant messages for each person
      */
 
+    // HEB has an offer for the shoppers that buy products amounting to more than $200.
+    //
+    //     If a shopper spends more than $200, they get a 12% discount.
+    //
+    //     Write a JS program, using conditionals, that logs to the browser, how much Ryan, Cameron and George need to pay.
+    //
+    //     Your program will have to display a line with the name of the person, the amount before the discount, the discount, if any, and the amount after the discount.
+    //
+    //  Create an array of objects where each object represents one shopper.
+    //
+    //     Use a foreach loop to iterate through the array, and console.log the relevant messages for each person
+
+
+
+// Create an array of objects where each object represents one shopper.
     let shoppers = [
-        {name: 'Cameron', amount: 180},
-        {name: 'Ryan', amount: 250},
-        {name: 'George', amount: 320}
+        { name: 'Cameron', amount: 180 },
+        { name: 'Ryan', amount: 250 },
+        { name: 'George', amount: 320 }
     ];
 
-    
-    
-    
+// Iterate through the array of shoppers using a forEach loop.
+    shoppers.forEach(function(shopper) {
+        let discount = 0;
+        let amountAfterDiscount = shopper.amount;
+
+        // Check if the shopper's amount is greater than $200.
+        if (shopper.amount > 200) {
+            // Calculate the discount (12% of the amount).
+            discount = shopper.amount * 0.12;
+            // Apply the discount to the amount.
+            amountAfterDiscount = shopper.amount - discount;
+        }
+
+        // Display the payment details for each shopper.
+        console.log(shopper.name + " bought $" + shopper.amount.toFixed(2) +
+            ", discount: $" + discount.toFixed(2) +
+            ", amount after discount: $" + amountAfterDiscount.toFixed(2));
+    });
+
+
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author

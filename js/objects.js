@@ -11,9 +11,16 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
+    
+    let person = {};                        // Step 1
+    person.firstName = "YourFirstName";     // Step 2
+    person.lastName = "YourLastName";       // Step 3
+
+    console.log(person.firstName); // Output: YourFirstName
+    console.log(person.lastName);  // Output: YourLastName
 
 
-
+    
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using

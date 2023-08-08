@@ -12,12 +12,12 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
     
-    let person = {};                        // Step 1
-    person.firstName = "YourFirstName";     // Step 2
-    person.lastName = "YourLastName";       // Step 3
-
-    console.log(person.firstName); // Output: YourFirstName
-    console.log(person.lastName);  // Output: YourLastName
+    // let person = {};                        // Step 1
+    // person.firstName = "YourFirstName";     // Step 2
+    // person.lastName = "YourLastName";       // Step 3
+    //
+    // console.log(person.firstName); // Output: YourFirstName
+    // console.log(person.lastName);  // Output: YourLastName
 
 
     
@@ -30,7 +30,20 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-// kb Notes: Might use this.
+// kb Notes: Might use this. 
+
+    let person = {};                     // Step 1: Create an empty object named `person`
+    person.firstName = "Rick";           // Step 2: Add `firstName` property and assign a value
+    person.lastName = "Sanchez";         // Step 3: Add `lastName` property and assign a value
+
+// Step 4: Create a `sayHello` method on the `person` object
+    person.sayHello = function () {
+        console.log("Hello from " + this.firstName + " " + this.lastName);
+    };
+
+// Step 5: Call the `sayHello` method of the `person` object
+    person.sayHello();                   // Step 6: Output: "Hello from Rick Sanchez!"
+
 
 
     /** TODO:
@@ -47,11 +60,11 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    let shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
 
     
     

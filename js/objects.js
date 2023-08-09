@@ -73,32 +73,31 @@
     //     Use a foreach loop to iterate through the array, and console.log the relevant messages for each person
 
 
-
-// Create an array of objects where each object represents one shopper.
-    let shoppers = [
-        { name: 'Cameron', amount: 180 },
-        { name: 'Ryan', amount: 250 },
-        { name: 'George', amount: 320 }
-    ];
-
-// Iterate through the array of shoppers using a forEach loop.
-    shoppers.forEach(function(shopper) {
-        let discount = 0;
-        let amountAfterDiscount = shopper.amount;
-
-        // Check if the shopper's amount is greater than $200.
-        if (shopper.amount > 200) {
-            // Calculate the discount (12% of the amount).
-            discount = shopper.amount * 0.12;
-            // Apply the discount to the amount.
-            amountAfterDiscount = shopper.amount - discount;
-        }
-
-        // Display the payment details for each shopper.
-        console.log(shopper.name + " bought $" + shopper.amount.toFixed(2) +
-            ", discount: $" + discount.toFixed(2) +
-            ", amount after discount: $" + amountAfterDiscount.toFixed(2));
-    });
+// // Create an array of objects where each object represents one shopper.
+//     let shoppers = [
+//         { name: 'Cameron', amount: 180 },
+//         { name: 'Ryan', amount: 250 },
+//         { name: 'George', amount: 320 }
+//     ];
+//
+// // Iterate through the array of shoppers using a forEach loop.
+//     shoppers.forEach(function(shopper) {
+//         let discount = 0;
+//         let amountAfterDiscount = shopper.amount;
+//
+//         // Check if the shopper's amount is greater than $200.
+//         if (shopper.amount > 200) {
+//             // Calculate the discount (12% of the amount).
+//             discount = shopper.amount * 0.12;
+//             // Apply the discount to the amount.
+//             amountAfterDiscount = shopper.amount - discount;
+//         }
+//
+//         // Display the payment details for each shopper.
+//         console.log(shopper.name + " bought $" + shopper.amount.toFixed(2) +
+//             ", discount: $" + discount.toFixed(2) +
+//             ", amount after discount: $" + amountAfterDiscount.toFixed(2));
+//     });
 
 
     /** TODO:
@@ -112,10 +111,84 @@
      * > console.log(books[0].title) // "The Salmon of Doubt"
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
-     */
+     * > console.log(books[0].title) // "Walkaway"
+     * > console.log(books[0].author.firstName) // "Cory"
+     * > console.log(books[0].author.lastName) // "Doctorow"
+     * > console.log(books[0].title) // "A Brief History of Time"
+     * > console.log(books[0].author.firstName) // "Stephen"
+     * > console.log(books[0].author.lastName) // "Hawking"
+     * > console.log(books[0].title) // "1984"
+     * > console.log(books[0].author.firstName) // "George"
+     * > console.log(books[0].author.lastName) // "Orwell"
+     * > console.log(books[0].title) // "The Great Gatsby"
+     * > console.log(books[0].author.firstName) // "F. Scott"
+     * > console.log(books[0].author.lastName) // "Fitzgerald"
+    */
+
+// Create an array named 'books' to store the book objects.
+    let books = [
+        {
+            title: "The Salmon of Doubt",
+            author: {
+                firstName: "Douglas",
+                lastName: "Adams"
+            }
+        },
+        {
+            title: "Walkaway",
+            author: {
+                firstName: "Cory",
+                lastName: "Doctorow"
+            }
+        },
+        {
+            title: "A Brief History of Time",
+            author: {
+                firstName: "Stephen",
+                lastName: "Hawking"
+            }
+        },
+        {
+            title: "1984",
+            author: {
+                firstName: "George",
+                lastName: "Orwell"
+            }
+        },
+        {
+            title: "The Great Gatsby",
+            author: {
+                firstName: "F. Scott",
+                lastName: "Fitzgerald"
+            }
+        }
+    ];
+
+// Example usage for each book:
+    console.log(books[0].title);            // Output: "The Salmon of Doubt"
+    console.log(books[0].author.firstName); // Output: "Douglas"
+    console.log(books[0].author.lastName);  // Output: "Adams"
+
+    console.log(books[1].title);            // Output: "Walkaway"
+    console.log(books[1].author.firstName); // Output: "Cory"
+    console.log(books[1].author.lastName);  // Output: "Doctorow"
+
+    console.log(books[2].title);            // Output: "A Brief History of Time"
+    console.log(books[2].author.firstName); // Output: "Stephen"
+    console.log(books[2].author.lastName);  // Output: "Hawking"
+
+    console.log(books[3].title);            // Output: "1984"
+    console.log(books[3].author.firstName); // Output: "George"
+    console.log(books[3].author.lastName);  // Output: "Orwell"
+
+    console.log(books[4].title);            // Output: "The Great Gatsby"
+    console.log(books[4].author.firstName); // Output: "F. Scott"
+    console.log(books[4].author.lastName);  // Output: "Fitzgerald"
 
 
-    
+
+// ------------------------------------
+
     /**
      * TODO:
      * Loop through the books array and output the following information about

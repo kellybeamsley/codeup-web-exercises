@@ -211,11 +211,33 @@
      *      Title: A Brief History of Time
      *      Author: Stephen Hawking
      *      ---
-     *      ...
+     *      Book # 4
+     *      Title: 1984
+     *      Author: George Orwell
+     *      ---
+     *      Book # 5
+     *      Title: The Great Gatsby
+     *      Author: F. Scott Fitzgerald
+     *      ---
      */
 
-    
-    
+// Loop through the 'books' array using a 'for' loop.
+    for (let i = 0; i < books.length; i++) {
+        // Get the current book object from the 'books' array.
+        let book = books[i];
+
+        // Calculate the book number (index + 1).
+        let bookNumber = i + 1;
+
+        // Construct the output message for each book.
+        let output = `Book # ${bookNumber}\nTitle: ${book.title}\nAuthor: ${book.author.firstName} ${book.author.lastName}\n---`;
+
+        // Log the output message to the console.
+        console.log(output);
+    }
+
+
+    // -----------------------------------------------------------------------
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
